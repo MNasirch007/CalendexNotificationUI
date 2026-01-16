@@ -1,0 +1,82 @@
+.navbar {
+  background-color: #2563eb; /* bg-blue-600 */
+  color: white;
+  padding-left: 1rem; /* px-4 */
+  padding-right: 1rem; /* px-4 */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space-x-4 */
+}
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+}
+
+.navbar-logo {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space-x-4 */
+}
+
+.navbar-button {
+  padding: 0.5rem; /* p-2 */
+  border-radius: 9999px; /* rounded-full */
+  transition: background-color 0.2s ease; /* transition-colors */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar-button:hover {
+  background-color: #1d4ed8; /* hover:bg-blue-700 */
+}
+
+.notification-icon {
+  width: 37px;
+  height: 37px;
+}
+
+.settings-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* space-x-2 */
+}
+
+.user-avatar {
+  width: 2rem; /* w-8 */
+  height: 2rem; /* h-8 */
+  background-color: #3b82f6; /* bg-blue-500 */
+  border-radius: 9999px; /* rounded-full */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-name {
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+}
+
+.chevron-icon {
+  width: 1rem; /* w-4 */
+  height: 1rem; /* h-4 */
+}

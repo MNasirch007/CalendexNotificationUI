@@ -1,0 +1,38 @@
+.custom-navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem 0;
+}
+
+.custom-navbar .navbar-brand {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: #fff !important;
+}
+
+.custom-navbar .navbar-brand:hover {
+  color: #007bff !important;
+}
+
+.custom-navbar .nav-link {
+  color: #fff !important;
+  margin: 0 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #007bff !important;
+}
+
+.custom-navbar .navbar-toggler {
+  border: none;
+}
+
+.custom-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+@media (max-width: 991px) {
+  .custom-navbar .nav-link {
+    padding: 0.5rem 0;
+  }
+}

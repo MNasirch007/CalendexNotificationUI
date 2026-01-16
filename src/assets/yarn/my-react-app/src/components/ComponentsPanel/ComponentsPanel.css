@@ -1,0 +1,695 @@
+/* Page Container */
+.page-container {
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
+  display: flex;
+  padding: 20px;
+  gap: 20px;
+}
+
+/* Side Components Panel */
+.components-panel {
+  background-color: #EBECF7;
+  padding: 4px 20px 150px 20px;
+  width: 251px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+  margin-top: 109px;
+  flex-shrink: 0;
+  margin-left: 63px;
+}
+
+.component-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px 0px 0px;
+  margin-bottom: 8px;
+  background-color: transparent;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 16px;
+  border-bottom: 3px solid #e6e0e0;
+}
+
+.component-item:first-child {
+  margin-top: 8px;
+}
+
+.component-item:hover {
+  background-color: transparent;
+  transform: none;
+  box-shadow: none;
+}
+
+.component-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex: 1;
+  min-width: 0;
+  margin-left: -8px;
+}
+
+.component-icon {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  color: #494949;
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.component-name {
+  font-size: 13px;
+  font-weight: 400;
+  color: #494949;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.component-add {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #999999;
+  cursor: pointer;
+  transition: color 0.2s ease;
+  margin-right: -8px;
+}
+
+.component-add:hover {
+  color: #777777;
+}
+
+.component-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Notification Container */
+.notification-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  width: 990px;
+  margin: 100px 0 0 auto;
+  margin-right: 300px;
+}
+
+/* Notification Card - Separate white card like in image */
+.notification-card {
+  background: #F8F8F8;
+  border-radius: 10px;
+  padding: 20px 40px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 850px;
+  max-width: 90%;
+  text-align: left;
+  height: 62px;
+  position: relative;
+}
+
+/* Notification Header */
+.notification-header {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.notification-label {
+  font-size: 11px;
+  color: #AAAAAA;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: absolute;
+  top: 8px; /* Very top of the card */
+  left: 20px; /* Left corner */
+}
+
+.notification-title {
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #141313;
+  margin: 0;
+  font-family:  Roboto, sans-serif;
+  font-style: regular;
+  padding-top: 20px; /* More space to accommodate label at top */
+  margin-left: -20px; /* Move title more to the left */
+}
+
+/* Modal Container - Centered in main content */
+.appointment-modal {
+  background: #ffffff;
+  border-radius: 24px;
+  width: 850px;
+  max-width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  position: relative;
+  margin-top: 3px;
+  height: 520px;
+}
+
+/* Upload Section */
+.upload-section {
+  
+}
+
+.upload-btn {
+  background: #ffffff;
+  border: 1px solid #e9ecef; /* Reduced border width from 2px to 1px */
+  border-radius: 12px;
+  font-family: robto,sans-serif;
+  font-size: 17px;
+  color: #131313;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: block; /* Block element */
+  margin: 0 auto; /* Center the button */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height:40px;
+  width:190px;
+  padding-bottom: 6px;
+  
+}
+
+.upload-btn:hover {
+  border-color: #007bff;
+  color: #007bff;
+}
+
+/* Modal Content */
+.modal-content {
+  padding: 40px 32px 32px;
+  text-align: center;
+}
+
+.modal-title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #2c3e50;
+  margin: 0 0 12px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.modal-subtitle {
+  font-size: 16px;
+  color: #6c757d;
+  margin: 0 0 40px 0;
+  line-height: 1.5;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Appointment Details */
+.appointment-details {
+  margin-bottom: 20px; /* Reduced margin to move section up */
+}
+
+/* Appointment Container - Light grey background */
+.appointment-container {
+  background: #f6f7f9; /* Lighter grey background */
+  border-radius: 16px;
+  padding: 30px 25px; /* Increased vertical padding for more height */
+  margin: -20px auto 0 auto; /* Increased negative top margin to move further up */
+  max-width: 60%; /* Reduced width from 100% to 80% */
+  min-height: 120px; /* Added minimum height */
+}
+
+.appointment-comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.appointment-time {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 20px;
+  min-width: 160px;
+  position: relative;
+}
+
+.appointment-time.new {
+  background: #e8f5e8;
+  border: 2px solid #28a745;
+}
+
+.time-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #6c757d;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.appointment-time.new .time-label {
+  color: #28a745;
+}
+
+.date-time {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date, .time {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #495057;
+  font-weight: 500;
+}
+
+.appointment-time.new .date,
+.appointment-time.new .time {
+  color: #28a745;
+}
+
+.calendar-icon, .clock-icon {
+  width: 16px;
+  height: 16px;
+  color: #6c757d;
+}
+
+.appointment-time.new .calendar-icon,
+.appointment-time.new .clock-icon {
+  color: #28a745;
+}
+
+/* Arrow */
+.arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #28a745;
+  margin: 0 8px;
+}
+
+.arrow svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* OK Button - Minimal width */
+.ok-button {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 8px 12px; /* Minimal padding */
+  font-size: 17px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 40px; /* Minimal min-width */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  width: 330px;
+  display: block;
+  margin: -5px auto 0 auto; /* Slightly reduced negative margin for small adjustment */
+  height: 54px;
+}
+
+.ok-button:hover {
+  background: #0056b3;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+.ok-button:active {
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .components-panel {
+    width: 100%;
+    margin-top: 0;
+  }
+  
+  .appointment-modal {
+    width: 95%;
+  }
+  
+  .modal-content {
+    padding: 32px 24px 24px;
+  }
+  
+  .appointment-comparison {
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .arrow {
+    transform: rotate(90deg);
+  }
+  
+  .modal-title {
+    font-size: 24px;
+  }
+  
+  .modal-subtitle {
+    font-size: 15px;
+  }
+}
+
+/* Next Button Container - White background with border */
+.page-container .next-button-container {
+  position: fixed !important;
+  top: 110px !important; /* Below navbar */
+  right: 30px; /* Right corner */
+  background: #F9F9FF; /* White background */
+  border: 1px solid #e5e5e5; /* Light gray border */
+  border-radius: 20px; /* Rounded container */
+  padding: 20px 25px; /* Padding around the button */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  z-index: 1000; /* Above other elements */
+  height: 100px;
+  width: 300px;
+  display: flex; /* Flex container */
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
+  
+  
+}
+
+/* Next Button - Inside the white container */
+.next-button-floating {
+  background: #FFD705; /* Bright yellow color */
+  color: #745D00; /* Darker gray text like in image */
+  border: none;
+  border-radius: 25px; /* Less rounded, more elongated */
+  padding: px px; /* Much wider padding for elongated shape */
+  font-size: 14px;
+  font-weight: 500; /* Medium weight, not too bold */
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 200px; /* Slightly reduced min-width */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.2); /* Lighter shadow inside container */
+  letter-spacing: 0.5px;
+  position: relative; /* Remove fixed positioning */
+  top: auto;
+  right: auto;
+  height: 48px;
+  width: 240px; /* Slightly reduced width */
+  
+}
+
+.next-button-floating:hover {
+  background: #FFC700;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.3);
+}
+
+.next-button-floating:active {
+  transform: translateY(0);
+}
+/* Menu Panel - Below Next Button Container */
+.page-container .menu-panel {
+  position: fixed;
+  top: 235px !important; /* Below the Next button container */
+  right: 45px; /* Same right position as button container */
+  background: #F9F9FF; /* White background */
+  border: 1px solid #e5e5e5; /* Light gray border */
+  border-radius: 20px; /* Rounded corners */
+  padding: 20px 0; /* Vertical padding */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  z-index: 1000; /* Above other elements */
+  width: 300px; /* Same width as button container */
+}
+
+/* Menu Item */
+.menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  border-bottom: 1px solid #f5f5f5;
+}
+
+.menu-item:last-child {
+  border-bottom: none; /* Remove border from last item */
+}
+
+.menu-item:hover {
+  background-color: #f8f9fa;
+}
+
+/* Menu Text */
+.menu-text {
+  font-size: 16px;
+  font-weight: 500;
+  color: #494949;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Menu Arrow - Triangular play icon like in image */
+.menu-arrow {
+  font-size: 14px;
+  color: #B9B9B9;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item:hover .menu-arrow {
+  color: #666666;
+}
+/* Upload Container - New container with specified background */
+.upload-container {
+  background: #F4F4FB; /* Specified background color */
+  border-radius: 12px;
+  padding: 15px 20px; /* Reduced vertical padding for smaller height */
+  margin: -10px auto 30px auto; /* Negative top margin to move it even higher, auto for centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 380px; /* Increased width from 320px to 380px */
+  max-width: 80%; /* Responsive max-width */
+}
+
+/* Updated Upload Button - Inside new container */
+.upload-container .upload-btn {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000; /* Changed to black color */
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.upload-container .upload-btn:hover {
+  border-color: #007bff;
+  color: #000000; /* Keep black on hover too */
+}
+/* Design-Preserving Responsive CSS - No visual changes, just scaling */
+
+/* Tablet screens - Scale down proportionally */
+@media (max-width: 1024px) {
+  .page-container {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .notification-container {
+    width: 90%;
+    margin-top: 80px;
+  }
+  
+  .notification-card {
+    width: 700px;
+    max-width: 90%;
+  }
+  
+  .appointment-modal {
+    width: 700px;
+    max-width: 90%;
+  }
+  
+  .page-container .next-button-container {
+    right: 25px;
+    width: 280px;
+  }
+  
+  .page-container .menu-panel {
+    right: 25px;
+    width: 280px;
+  }
+}
+
+/* Mobile screens - Maintain design, just fit screen */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 10px;
+    gap: 10px;
+  }
+  
+  .components-panel {
+    width: 100%;
+    max-width: 251px;
+    margin: 10px auto 0;
+  }
+  
+  .notification-container {
+    width: 95%;
+    margin-top: 60px;
+  }
+  
+  .notification-card {
+    width: 600px;
+    max-width: 95%;
+  }
+  
+  .appointment-modal {
+    width: 600px;
+    max-width: 95%;
+  }
+  
+  .upload-container {
+    width: 320px;
+    max-width: 90%;
+  }
+  
+  .appointment-container {
+    max-width: 90%;
+  }
+  
+  .page-container .next-button-container {
+    right: 20px;
+    width: 260px;
+  }
+  
+  .next-button-floating {
+    width: 180px;
+    min-width: 180px;
+  }
+  
+  .page-container .menu-panel {
+    right: 20px;
+    width: 260px;
+  }
+}
+
+/* Small mobile - Preserve all design elements */
+@media (max-width: 480px) {
+  .page-container {
+    padding: 8px;
+  }
+  
+  .components-panel {
+    margin: 5px auto 0;
+  }
+  
+  .notification-container {
+    width: 98%;
+    margin-top: 50px;
+  }
+  
+  .notification-card {
+    width: 500px;
+    max-width: 98%;
+  }
+  
+  .appointment-modal {
+    width: 500px;
+    max-width: 98%;
+  }
+  
+  .upload-container {
+    width: 280px;
+    max-width: 95%;
+  }
+  
+  .appointment-container {
+    max-width: 95%;
+  }
+  
+  .page-container .next-button-container {
+    right: 15px;
+    width: 240px;
+  }
+  
+  .next-button-floating {
+    width: 160px;
+    min-width: 160px;
+  }
+  
+  .page-container .menu-panel {
+    right: 15px;
+    width: 240px;
+  }
+}
+
+/* Very small screens - Minimum adjustments */
+@media (max-width: 360px) {
+  .notification-card {
+    width: 400px;
+    max-width: 98%;
+  }
+  
+  .appointment-modal {
+    width: 400px;
+    max-width: 98%;
+  }
+  
+  .upload-container {
+    width: 250px;
+    max-width: 95%;
+  }
+  
+  .page-container .next-button-container {
+    right: 10px;
+    width: 220px;
+  }
+  
+  .next-button-floating {
+    width: 140px;
+    min-width: 140px;
+  }
+  
+  .page-container .menu-panel {
+    right: 10px;
+    width: 220px;
+  }
+}

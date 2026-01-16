@@ -1,0 +1,419 @@
+.preview-page {
+  min-height: calc(80vh - 48px);
+  background: linear-gradient(135deg, #e8eaf6 0%, #f3e5f5 100%);
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.preview-container {
+  display: flex;
+  gap: 30px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+/* Left Panel */
+.left-panel {
+  background: #F9F9FF;
+  border-radius: 12px;
+  padding: 15px !important;
+  width: 248px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 45px;
+  height: auto;
+  min-height: 270px;
+  margin-right: -8px;
+
+}
+
+.info-item {
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2.6px solid #EDEDED;
+}
+
+.info-item:last-child {
+  margin-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.info-label {
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.info-value {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+/* Center Preview */
+.center-preview {
+  flex: 1;
+  max-width: 700px;
+}
+
+.campaign-name-header {
+  background: #F8F8F8;
+  border-radius: 12px;
+  padding: 20px 30px;
+  margin-top: 70px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  height: 63px;
+  position: relative !important;
+  width: 700px;
+}
+
+.campaign-label {
+  font-size: 12px;
+  color: #999;
+  position: absolute !important;
+  top: 12px !important;
+  left: 4px !important;
+}
+
+.campaign-value {
+  font-size: 16px;
+  color: #141313;
+  font-weight: 500;
+  padding-top: 20px !important;
+  margin-left: -17px !important;
+  font-weight: 400;
+}
+
+.preview-card {
+  background: white;
+  border-radius: 20px;
+  padding: 45px 40px 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  margin-top: 14px;
+  height: 590px;
+}
+
+.success-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  background: #C8E6C9;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-icon svg {
+  width: 45px;
+  height: 45px;
+}
+
+.preview-title {
+  font-size: 26px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 10px 0;
+}
+
+.preview-subtitle {
+  font-size: 14px;
+  color: #999;
+  margin: 0 0 35px 0;
+}
+
+/* Appointment Comparison - Image ke mutabiq */
+.appointment-comparison-box {
+  background: #FFFFFF;
+  border-radius: 0;
+  padding: 0;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  height: 110px;
+}
+
+.appointment-side {
+  background: #F9FAFB;
+  border-radius: 12px;
+  padding: 18px 20px;
+  min-width: 160px;
+  border: 1px solid #E0E0E0;
+}
+
+.new-side {
+  background: #F9FAFB;
+  border: 1px solid #4CAF50;
+}
+
+.side-label {
+  font-size: 12px;
+  color: #999;
+  font-weight: 500;
+  margin-bottom: 15px;
+  text-transform: capitalize;
+  letter-spacing: 0;
+}
+
+.new-label {
+  color: #4CAF50;
+}
+
+.datetime-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 124px;
+}
+
+.date-row, .time-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+.new-datetime .date-row,
+.new-datetime .time-row {
+  color: #4CAF50;
+  font-weight: 500;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  color: #999;
+}
+
+.new-datetime .icon {
+  color: #4CAF50;
+}
+
+.arrow-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.arrow-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ok-btn {
+  background: #2196F3;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 50px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 320px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.ok-btn:hover {
+  background: #1976D2;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(33, 150, 243, 0.3);
+}
+
+/* Right Panel */
+.right-panel {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.send-btn {
+  background: #FFD705;
+  color: #745D00;
+  border: none;
+  border-radius: 25px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 215, 0, 0.3);
+  margin-top: 3px;
+  height: 49px;
+  width: 250px;
+  
+}
+
+.send-btn:hover {
+  background: #FFC700;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(255, 215, 0, 0.4);
+}
+
+.action-menu {
+  background: #F9F9FF;
+  border-radius: 12px;
+  padding: 10px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-top: -12px;
+  }
+
+.action-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 25px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  
+  
+}
+
+.action-item:last-child {
+  border-bottom: none;
+}
+
+.action-item:hover {
+  background-color: #f0f0f5;
+}
+
+.action-item span:first-child {
+  font-size: 15px;
+  color: #333;
+  font-weight: 500;
+}
+
+.action-item .arrow {
+  font-size: 12px;
+  color: #B9B9B9;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .preview-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .left-panel,
+  .right-panel {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .center-preview {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .appointment-comparison-box {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .arrow-icon {
+    transform: rotate(90deg);
+  }
+  
+  .preview-card {
+    padding: 35px 25px;
+  }
+}
+
+
+/* Appointment Box Container - New wrapper */
+.appointment-box-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 4px;
+  width: 220px;
+  height: 100px;
+}
+
+
+/* Appointment Comparison Wrapper - Outer container */
+.appointment-comparison-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 230px;
+}
+
+
+/* Send Button Container - White background */
+.send-btn-container {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  width: 280px;
+  margin-top: 60px
+}
+
+
+/* Appointments Inner Container - Grey background wrapper */
+.appointments-inner-container {
+  background: #f8f7f7;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+  height:170px;
+  width:380px;
+  margin-top: -45px;
+}
+
+
+/* Appointment Column - Wrapper for label and box */
+.appointment-column {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Column Label - Above the box */
+.column-label {
+  font-size: 13px;
+  color: #999;
+  font-weight: 600;
+  text-transform: capitalize;
+  padding-left: 4px;
+}
+
+.new-column-label {
+  color: #4CAF50;
+}
+
+
+/* Preview Card Inner - Grey background container */
+.preview-card-inner {
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 30px 25px;
+  margin-top: -30px;
+  border: 1px solid #ffffff;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  width: 400px;
+  margin-left: 7.5rem;
+  ;
+}
