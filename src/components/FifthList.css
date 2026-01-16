@@ -18,22 +18,25 @@
   display: flex;
   gap: 30px;
   align-items: flex-start;
-  margin-left: -514px;
+  margin-left: 0;
+  width: 100%;
+  flex-wrap: wrap;
 }
 
 .cards-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, auto);
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  width: 100%;
   max-width: 1100px;
 }
 
 .left-card {
   display: flex;
   flex-direction: column;
-  margin-left: 300px;
-  width: 260px;
+  margin-left: 0;
+  width: 100%;
+  max-width: 260px;
   font-family: roboto,sans-serif;
   font-size: 16px;
   font-weight: bold;
@@ -60,7 +63,8 @@
   cursor: pointer;
   min-height: 45px !important;
   width: 100%;
-  min-width: 350px;
+  min-width: 0;
+  max-width: 350px;
 }
 
 .card-label {
@@ -86,15 +90,18 @@
 }
 
 .next-button5-container {
-  position: absolute;
-  top: 18px;
-  right: 17px;
+  position: relative;
+  top: auto;
+  right: auto;
   background-color: #F9F9FF;
   margin-top: 13px;
   border-radius: 10px;
-  height: 80px;
-  width: 280px;
-  margin-right: 12px;
+  min-height: 80px;
+  height: auto;
+  width: 100%;
+  max-width: 280px;
+  margin-left: auto;
+  padding: 16px;
 }
 
 .next-btn5 {
@@ -108,11 +115,12 @@
   cursor: pointer;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 48px;
-  width: 240px;
+  width: 100%;
+  max-width: 240px;
   position: relative;
-  top: 16px !important;
-  left: 5px;
-  margin-left: 30px;
+  top: 0 !important;
+  left: 0;
+  margin: 0 auto;
 }
 
 .next-btn:hover {
@@ -120,13 +128,93 @@
 }
 
 @media (max-width: 768px) {
+  .campaign-body {
+    padding: 16px;
+    flex-direction: column;
+  }
+  
+  .main-content {
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+  }
+  
   .cards-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  .left-card {
+    max-width: 100%;
+  }
+  
+  .left-card .card {
+    min-width: 100% !important;
+  }
+  
+  .card {
+    max-width: 100%;
+    padding: 6px 20px;
   }
   
   .next-button5-container {
     position: static;
     margin-top: 20px;
-    text-align: right;
+    max-width: 100%;
+    text-align: center;
+  }
+  
+  .next-btn5 {
+    max-width: 100%;
+  }
+}
+
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .campaign-body {
+    padding: 24px;
+  }
+  
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .campaign-body {
+    padding: 12px;
+  }
+  
+  .card {
+    padding: 6px 16px;
+  }
+  
+  .card-label {
+    font-size: 11px;
+  }
+  
+  .card-value {
+    font-size: 13px;
+  }
+  
+  .next-btn5 {
+    height: 42px;
+    font-size: 13px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .campaign-body {
+    padding: 8px;
+  }
+  
+  .card {
+    padding: 6px 12px;
+  }
+  
+  .next-button5-container {
+    padding: 12px;
   }
 }

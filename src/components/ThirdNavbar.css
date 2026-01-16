@@ -94,6 +94,17 @@
   line-height: 1.2;
 }
 
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .navbar-content {
+    padding: 0 16px;
+  }
+  
+  .navbar-right {
+    gap: 14px;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .navbar-content {
@@ -106,5 +117,71 @@
   
   .navbar-profile-info {
     display: none;
+  }
+  
+  .navbar-logo {
+    height: 26px;
+    width: 26px;
+  }
+  
+  .navbar-profile-img {
+    height: 28px;
+    width: 28px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .navbar {
+    height: auto;
+    min-height: 40px;
+  }
+  
+  .navbar-content {
+    padding: 0 12px;
+  }
+  
+  .navbar-right {
+    gap: 10px;
+  }
+  
+  .navbar-logo {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .navbar-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .navbar-profile-img {
+    height: 26px;
+    width: 26px;
+  }
+  
+  .navbar-divider {
+    height: 20px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .navbar-content {
+    padding: 0 10px;
+  }
+  
+  .navbar-right {
+    gap: 8px;
+  }
+  
+  .navbar-logo {
+    height: 22px;
+    width: 22px;
+  }
+  
+  .navbar-profile-img {
+    height: 24px;
+    width: 24px;
   }
 }

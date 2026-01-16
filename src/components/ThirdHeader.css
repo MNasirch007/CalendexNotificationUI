@@ -146,6 +146,21 @@
   color: #6b7280;
 }
 
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .template-search-container {
+    width: 320px;
+  }
+  
+  .template-search-input {
+    width: 320px;
+  }
+  
+  .template-header-right {
+    gap: 10px;
+  }
+}
+
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   .template-search-container {

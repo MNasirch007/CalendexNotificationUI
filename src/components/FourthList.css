@@ -6,19 +6,21 @@
   padding: 20px;
   gap: 20px;
   position: relative;
+  flex-wrap: wrap;
 }
 
 /* Side Components Panel */
 .components-panel {
   background-color: #EBECF7;
   padding: 4px 20px 150px 20px;
-  width: 264px;
+  width: 100%;
+  max-width: 264px;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   height: fit-content;
   margin-top: 0rem;
   flex-shrink: 0;
-  margin-left: 20px;
+  margin-left: 0;
 }
 
 .component-item {
@@ -117,8 +119,9 @@
   width: 100%;
   max-width: 650px;
   margin: 12px auto 0;
-  margin-left: calc(50% + 6rem);
-  transform: translateX(-50%);
+  margin-left: auto;
+  margin-right: auto;
+  transform: none;
 }
 
 /* Fourth Notification Card */
@@ -458,8 +461,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 320px;
-  max-width: 80%;
+  width: 100%;
+  max-width: 320px;
 }
 
 .fourth-upload-container .fourth-upload-btn {
@@ -477,4 +480,267 @@
 .fourth-upload-container .fourth-upload-btn:hover {
   border-color: #007bff;
   color: #000000;
+}
+
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .page-container {
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .components-panel {
+    max-width: 240px;
+    padding: 4px 16px 120px 16px;
+  }
+  
+  .fourth-notification-container {
+    max-width: 550px;
+  }
+  
+  .fourth-appointment-modal {
+    min-height: 420px;
+  }
+  
+  .page-container .next-button-container {
+    right: 16px;
+    width: 240px;
+  }
+  
+  .next-button-floating {
+    width: 200px;
+    min-width: 180px;
+  }
+  
+  .page-container .menu-panel {
+    right: 16px;
+    width: 240px;
+  }
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .page-container {
+    flex-direction: column;
+    padding: 16px;
+    gap: 16px;
+  }
+  
+  .components-panel {
+    max-width: 100%;
+    width: 100%;
+    padding: 4px 16px 30px 16px;
+    margin-left: 0;
+    order: 1;
+  }
+  
+  .main-content {
+    width: 100%;
+    order: 2;
+  }
+  
+  .fourth-notification-container {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .page-container .next-button-container {
+    position: relative !important;
+    top: auto !important;
+    right: auto;
+    width: 100%;
+    max-width: 100%;
+    margin-top: 16px;
+    order: 3;
+  }
+  
+  .page-container .menu-panel {
+    position: relative;
+    top: auto !important;
+    right: auto;
+    width: 100%;
+    margin-top: 16px;
+    order: 4;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .page-container {
+    padding: 12px;
+    gap: 12px;
+  }
+  
+  .components-panel {
+    padding: 4px 12px 20px 12px;
+  }
+  
+  .component-item {
+    padding: 0px 12px 0px 0px;
+  }
+  
+  .component-name {
+    font-size: 12px;
+  }
+  
+  .fourth-notification-card {
+    padding: 12px 20px;
+    height: auto;
+    min-height: 50px;
+  }
+  
+  .fourth-notification-label {
+    font-size: 10px;
+    top: 6px;
+    left: 16px;
+  }
+  
+  .fourth-notification-title {
+    font-size: 14px;
+    padding-top: 16px;
+    margin-left: -16px;
+  }
+  
+  .fourth-appointment-modal {
+    min-height: 400px;
+    border-radius: 16px;
+  }
+  
+  .fourth-modal-content {
+    padding: 25px 20px 20px;
+  }
+  
+  .fourth-modal-title {
+    font-size: 22px;
+  }
+  
+  .fourth-modal-subtitle {
+    font-size: 14px;
+    margin: 0 0 25px 0;
+  }
+  
+  .fourth-appointment-container {
+    padding: 20px 15px;
+    max-width: 90%;
+  }
+  
+  .fourth-appointment-comparison {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .fourth-appointment-time {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .fourth-arrow {
+    transform: rotate(90deg);
+  }
+  
+  .fourth-ok-button {
+    min-width: 200px;
+    width: 100%;
+    max-width: 280px;
+  }
+  
+  .fourth-upload-container {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .next-button-floating {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .menu-item {
+    padding: 12px 18px;
+  }
+  
+  .menu-text {
+    font-size: 14px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .page-container {
+    padding: 8px;
+  }
+  
+  .components-panel {
+    padding: 4px 10px 16px 10px;
+  }
+  
+  .component-name {
+    font-size: 11px;
+  }
+  
+  .component-add {
+    font-size: 24px;
+    width: 30px;
+    height: 30px;
+  }
+  
+  .fourth-notification-card {
+    padding: 10px 16px;
+  }
+  
+  .fourth-modal-content {
+    padding: 20px 16px 16px;
+  }
+  
+  .fourth-modal-title {
+    font-size: 20px;
+  }
+  
+  .fourth-modal-subtitle {
+    font-size: 13px;
+  }
+  
+  .fourth-appointment-container {
+    padding: 16px 12px;
+  }
+  
+  .fourth-time-label {
+    font-size: 12px;
+  }
+  
+  .fourth-date, .fourth-time {
+    font-size: 13px;
+  }
+  
+  .fourth-ok-button {
+    padding: 10px 30px;
+    font-size: 14px;
+    height: 44px;
+  }
+  
+  .page-container .next-button-container {
+    height: auto;
+    padding: 16px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .page-container {
+    padding: 6px;
+  }
+  
+  .fourth-modal-title {
+    font-size: 18px;
+  }
+  
+  .fourth-appointment-time {
+    padding: 12px 14px;
+    min-width: 120px;
+  }
+  
+  .fourth-ok-button {
+    padding: 8px 24px;
+    font-size: 13px;
+  }
 }

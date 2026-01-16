@@ -26,3 +26,68 @@ html, body {
   width: 100%;
   max-width: 100vw;
 }
+
+/* Global Responsive Utilities */
+
+/* Container responsive adjustments */
+@media (max-width: 768px) {
+  .flex {
+    flex-wrap: wrap;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+/* Prevent text overflow */
+.text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Responsive font sizes */
+@media (max-width: 480px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 360px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive spacing utilities */
+@media (max-width: 768px) {
+  .responsive-padding {
+    padding: 12px !important;
+  }
+  
+  .responsive-margin {
+    margin: 12px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .responsive-padding {
+    padding: 8px !important;
+  }
+  
+  .responsive-margin {
+    margin: 8px !important;
+  }
+}

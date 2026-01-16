@@ -64,9 +64,11 @@
   padding: 20px 30px;
   margin-top: 38px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  height: 63px;
+  height: auto;
+  min-height: 63px;
   position: relative !important;
-  width: 700px;
+  width: 100%;
+  max-width: 700px;
 }
 
 .campaign-label {
@@ -93,7 +95,8 @@
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
   text-align: center;
   margin-top: 14px;
-  height: 638px;
+  min-height: 638px;
+  height: auto;
 }
 
 
@@ -337,9 +340,12 @@
   align-items: flex-start;
   justify-content: center;
   gap: 8px;
-  height:170px;
-  width:380px;
+  min-height: 170px;
+  height: auto;
+  width: 100%;
+  max-width: 380px;
   margin-top: -45px;
+  flex-wrap: wrap;
 }
 
 /* Appointment Column */
@@ -370,8 +376,10 @@
   margin-top: -14px;
   border: 1px solid #ffffff;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
-  width: 400px;
-  margin-left: 5.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Responsive */
@@ -393,9 +401,45 @@
 }
 
 @media (max-width: 768px) {
+  .preview-page {
+    padding: 8px 12px;
+  }
+  
+  .left-panel {
+    width: 100%;
+    max-width: 100%;
+    min-height: auto;
+    padding: 12px !important;
+    margin-right: 0;
+  }
+  
+  .center-preview {
+    max-width: 100%;
+  }
+  
+  .campaign-name-header {
+    padding: 16px 20px;
+    margin-top: 16px;
+  }
+  
+  .campaign-label {
+    left: 0 !important;
+  }
+  
+  .campaign-value {
+    margin-left: -10px !important;
+  }
+  
   .appointment-comparison-box {
     flex-direction: column;
     gap: 15px;
+    height: auto;
+    padding: 16px;
+  }
+  
+  .appointment-side {
+    width: 100%;
+    max-width: 200px;
   }
   
   .arrow-icon {
@@ -404,5 +448,181 @@
   
   .preview-card {
     padding: 35px 25px;
+    min-height: auto;
+  }
+  
+  .preview-title {
+    font-size: 22px;
+  }
+  
+  .ok-btn {
+    min-width: 100%;
+    max-width: 280px;
+    padding: 12px 40px;
+  }
+  
+  .right-panel {
+    width: 100%;
+  }
+  
+  .send-btn-container {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .send-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+  
+  .action-menu {
+    width: 100%;
+  }
+  
+  .appointments-inner-container {
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .preview-card-inner {
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .appointment-comparison-wrapper {
+    height: auto;
+  }
+}
+
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .preview-container {
+    gap: 20px;
+  }
+  
+  .left-panel {
+    width: 220px;
+  }
+  
+  .center-preview {
+    max-width: 600px;
+  }
+  
+  .campaign-name-header {
+    max-width: 600px;
+  }
+  
+  .right-panel {
+    width: 250px;
+  }
+  
+  .send-btn-container {
+    width: 250px;
+  }
+  
+  .send-btn {
+    width: 220px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .preview-page {
+    padding: 6px 8px;
+  }
+  
+  .left-panel {
+    padding: 10px !important;
+  }
+  
+  .info-label {
+    font-size: 11px;
+  }
+  
+  .info-value {
+    font-size: 14px;
+  }
+  
+  .campaign-name-header {
+    padding: 14px 16px;
+  }
+  
+  .preview-card {
+    padding: 25px 16px;
+  }
+  
+  .preview-title {
+    font-size: 20px;
+  }
+  
+  .preview-subtitle {
+    font-size: 13px;
+  }
+  
+  .appointment-side {
+    padding: 14px 16px;
+    min-width: 140px;
+  }
+  
+  .side-label {
+    font-size: 11px;
+  }
+  
+  .date-row, .time-row {
+    font-size: 13px;
+  }
+  
+  .ok-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+  
+  .send-btn {
+    padding: 14px 24px;
+    font-size: 15px;
+    height: 45px;
+  }
+  
+  .action-item {
+    padding: 14px 20px;
+  }
+  
+  .action-item span:first-child {
+    font-size: 14px;
+  }
+  
+  .appointments-inner-container {
+    padding: 16px;
+  }
+  
+  .preview-card-inner {
+    padding: 24px 20px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .preview-page {
+    padding: 4px 6px;
+  }
+  
+  .preview-title {
+    font-size: 18px;
+  }
+  
+  .appointment-side {
+    padding: 12px 14px;
+    min-width: 130px;
+  }
+  
+  .ok-btn {
+    font-size: 13px;
+  }
+  
+  .send-btn {
+    font-size: 14px;
+    height: 42px;
   }
 }

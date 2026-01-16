@@ -50,7 +50,8 @@
   position: relative;
   flex: 0 1 auto;
   max-width: calc(300px + 10rem);
-  margin-right: 40rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .template-search-icon {
@@ -154,6 +155,23 @@
   color: #6b7280;
 }
 
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .template-header-content {
+    padding: 0 16px;
+    gap: 12px;
+  }
+  
+  .template-search-container {
+    max-width: 280px;
+    margin-right: 2rem;
+  }
+  
+  .template-search-input {
+    min-width: 180px;
+  }
+}
+
 /* Tablet and below */
 @media (max-width: 1024px) {
   .template-header-content {
@@ -162,6 +180,7 @@
   
   .template-search-container {
     max-width: 250px;
+    margin-right: 0;
   }
   
   .template-search-input {

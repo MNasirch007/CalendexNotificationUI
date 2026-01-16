@@ -80,3 +80,109 @@
   width: 1rem; /* w-4 */
   height: 1rem; /* h-4 */
 }
+
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .navbar {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+  .navbar {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .navbar-right {
+    gap: 0.75rem;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+  .navbar {
+    height: auto;
+    min-height: 40px;
+    padding: 8px 12px;
+  }
+  
+  .navbar-left {
+    gap: 0.5rem;
+  }
+  
+  .navbar-logo {
+    width: 26px;
+    height: 26px;
+  }
+  
+  .navbar-right {
+    gap: 0.5rem;
+  }
+  
+  .navbar-button {
+    padding: 0.375rem;
+  }
+  
+  .notification-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .user-avatar {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  .user-name {
+    font-size: 0.75rem;
+    display: none;
+  }
+  
+  .chevron-icon {
+    display: none;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 6px 10px;
+  }
+  
+  .navbar-logo {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .notification-icon {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .user-avatar {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+  
+  .user-profile {
+    gap: 0.25rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .navbar {
+    padding: 6px 8px;
+  }
+  
+  .navbar-left {
+    gap: 0.375rem;
+  }
+  
+  .navbar-right {
+    gap: 0.375rem;
+  }
+}

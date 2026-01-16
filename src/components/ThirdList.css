@@ -181,6 +181,26 @@
   transform: translateY(0);
 }
 
+/* Laptop breakpoint */
+@media (min-width: 1024px) and (max-width: 1440px) {
+  .template-list-content {
+    padding: 20px;
+  }
+  
+  .template-table th,
+  .template-table td {
+    padding: 14px 16px;
+  }
+  
+  .template-table th:first-child {
+    padding-left: 50px;
+  }
+  
+  .next-button {
+    padding: 12px 50px;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .template-list-content {
