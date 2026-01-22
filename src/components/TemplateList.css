@@ -26,26 +26,36 @@
 }
 
 .template-table th {
-  padding: 16px 20px;
+  padding: 16px 12px;
   text-align: left;
   font-size: 12px;
   font-weight: 600;
   color: #1f2937;
   border-bottom: 1px solid #e5e7eb;
+  white-space: nowrap;
 }
 
 .template-table th:first-child {
-  padding-left: 73px;
+  padding-left: 24px;
 }
 
 .template-table th:last-child {
-  padding-left: 32px;
+  padding-right: 24px;
 }
 
 .template-table td {
-  padding: 11px 20px;
+  padding: 12px 12px;
   font-size: 14px;
   color: #6b7280;
+  vertical-align: middle;
+}
+
+.template-table td:first-child {
+  padding-left: 24px;
+}
+
+.template-table td:last-child {
+  padding-right: 24px;
 }
 
 .template-table-row:hover {
@@ -62,7 +72,7 @@
 .name-with-circle {
   display: flex;
   align-items: center;
-  gap: 40px;
+  gap: 12px;
 }
 
 .name-circle {
@@ -134,42 +144,19 @@
   background-color: #dc2626;
 }
 
-/* Laptop breakpoint */
-@media (min-width: 1024px) and (max-width: 1440px) {
-  .template-list-content {
-    padding: 20px;
-  }
-  
-  .template-table th,
-  .template-table td {
-    padding: 14px 16px;
-  }
-  
-  .template-table th:first-child {
-    padding-left: 50px;
-  }
-}
-
 /* Responsive Design */
-@media (max-width: 768px) {
-  .template-list-content {
-    padding: 16px;
-  }
-  
+@media (max-width: 1280px) {
   .template-table {
-    font-size: 12px;
+    min-width: 900px;
   }
-  
-  .template-table th,
-  .template-table td {
-    padding: 12px 16px;
-  }
-}
-
-/* Mobile Responsive Styles for Template List */
-@media (max-width: 1024px) {
   .template-table-container {
     overflow-x: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .template-list-content {
+    padding: 16px;
   }
   
   .template-table {
@@ -179,12 +166,7 @@
 
 @media (max-width: 768px) {
   .template-list-content {
-    padding: 16px;
-  }
-  
-  .template-table-container {
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
+    padding: 12px;
   }
   
   .template-table {
@@ -194,7 +176,17 @@
   
   .template-table th,
   .template-table td {
-    padding: 10px 8px;
+    padding: 10px 12px;
+  }
+
+  .template-table th:first-child,
+  .template-table td:first-child {
+    padding-left: 16px;
+  }
+
+  .template-table th:last-child,
+  .template-table td:last-child {
+    padding-right: 16px;
   }
   
   .name-circle {
@@ -209,44 +201,14 @@
   
   .next-button-container {
     padding: 16px;
+    margin-right: 0 !important;
+    margin-top: 40px !important;
   }
   
   .next-button {
     width: 100% !important;
-    max-width: 300px;
+    max-width: 400px;
     margin: 0 auto !important;
-  }
-}
-
-@media (max-width: 640px) {
-  .template-list-content {
-    padding: 12px;
-  }
-  
-  .template-table {
-    min-width: 600px;
-    font-size: 12px;
-  }
-  
-  .template-table th,
-  .template-table td {
-    padding: 8px 6px;
-  }
-  
-  .template-name {
-    font-size: 13px;
-  }
-  
-  .trigger-type,
-  .channels,
-  .created-by,
-  .created-date {
-    font-size: 12px;
-  }
-  
-  .next-button {
-    height: 36px !important;
-    font-size: 14px;
   }
 }
 
@@ -256,27 +218,17 @@
   }
   
   .template-table {
-    min-width: 500px;
-    font-size: 11px;
+    min-width: 600px;
+    font-size: 12px;
   }
   
   .template-table th,
   .template-table td {
-    padding: 6px 4px;
+    padding: 8px 10px;
   }
   
   .name-circle {
     width: 10px;
     height: 10px;
-  }
-  
-  .status-badge {
-    padding: 3px 8px;
-    font-size: 10px;
-  }
-  
-  .status-circle {
-    width: 6px;
-    height: 6px;
   }
 }

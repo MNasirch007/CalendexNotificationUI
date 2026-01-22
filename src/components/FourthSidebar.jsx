@@ -9,7 +9,7 @@ import tsi7 from '../assets/tsi7.png'
 
 const FourthSidebar = () => {
   return (
-    <div className="sidebar"style={{height:"100%",minHeight:"683px",width:"54px",borderTop:"2px solid #FFD705",borderRadius:"10px",marginTop:"5px"}}>
+    <div className="sidebar"style={{height:"100%",borderTop:"2px solid #FFD705",borderRadius:"10px",marginTop:"5px"}}>
       <div className="sidebar-bottom"style={{gap:"40px"}}>
         <img 
           src={tsi} 
