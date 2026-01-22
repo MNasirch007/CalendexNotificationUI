@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Header from './components/Header'
 import Sidebar from './components/Sidebar'
 import Dashboard from './components/Dashboard'
+import Layout from './components/Layout'
 import TemplateNavbar from './components/TemplateNavbar'
 import TemplateHeader from './components/TemplateHeader'
 import TemplateSidebar from './components/TemplateSidebar'
@@ -26,6 +27,11 @@ import SixthList from './components/SixthList'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('dashboard')
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen)
+  }
 
   const handleCreateNewClick = () => {
     setCurrentPage('templateList')
@@ -69,90 +75,91 @@ function App() {
 
   if (currentPage === 'dashboard') {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <Header onCreateNewClick={handleCreateNewClick} />
-        <div className="flex">
-          <Sidebar />
-          <main className="flex-1">
-            <Dashboard />
-          </main>
-        </div>
-      </div>
+      <Layout
+        Navbar={Navbar}
+        Header={Header}
+        Sidebar={Sidebar}
+        isSidebarOpen={isSidebarOpen}
+        onToggleSidebar={toggleSidebar}
+        onCreateNewClick={handleCreateNewClick}
+      >
+        <Dashboard />
+      </Layout>
     )
   }
 
   if (currentPage === 'thirdPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <ThirdNavbar onBackClick={handleBackToTemplateList} />
-        <ThirdHeader onBackClick={handleBackToTemplateList} />
-        <div className="flex">
-          <ThirdSidebar />
-          <main className="flex-1">
-            <ThirdList onNext={handleNextToFourth} />
-          </main>
-        </div>
-      </div>
+      <Layout
+        Navbar={ThirdNavbar}
+        Header={ThirdHeader}
+        Sidebar={ThirdSidebar}
+        isSidebarOpen={isSidebarOpen}
+        onToggleSidebar={toggleSidebar}
+        onBackClick={handleBackToTemplateList}
+      >
+        <ThirdList onNext={handleNextToFourth} />
+      </Layout>
     )
   }
 
   if (currentPage === 'fourthPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <FourthNavbar onBackClick={handleBackToThird} />
-        <FourthHeader />
-        <div className="flex">
-          <FourthSidebar />
-          <main className="flex-1">
-            <FourthList onNext={handleNextToFifth} />
-          </main>
-        </div>
-      </div>
+      <Layout
+        Navbar={FourthNavbar}
+        Header={FourthHeader}
+        Sidebar={FourthSidebar}
+        isSidebarOpen={isSidebarOpen}
+        onToggleSidebar={toggleSidebar}
+        onBackClick={handleBackToThird}
+      >
+        <FourthList onNext={handleNextToFifth} />
+      </Layout>
     )
   }
 
   if (currentPage === 'fifthPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <FifthNavbar onBackClick={handleBackToFourth} />
-        <FifthHeader />
-        <div className="flex">
-          <FifthSidebar />
-          <main className="flex-1">
-            <FifthList onNext={handleNextToSixth} />
-          </main>
-        </div>
-      </div>
+      <Layout
+        Navbar={FifthNavbar}
+        Header={FifthHeader}
+        Sidebar={FifthSidebar}
+        isSidebarOpen={isSidebarOpen}
+        onToggleSidebar={toggleSidebar}
+        onBackClick={handleBackToFourth}
+      >
+        <FifthList onNext={handleNextToSixth} />
+      </Layout>
     )
   }
 
   if (currentPage === 'sixthPage') {
     return (
-      <div className="min-h-screen bg-gray-50">
-        <SixthNavbar onBackClick={handleBackToFifth} />
-        <SixthHeader />
-        <div className="flex">
-          <SixthSidebar />
-          <main className="flex-1">
-            <SixthList />
-          </main>
-        </div>
-      </div>
+      <Layout
+        Navbar={SixthNavbar}
+        Header={SixthHeader}
+        Sidebar={SixthSidebar}
+        isSidebarOpen={isSidebarOpen}
+        onToggleSidebar={toggleSidebar}
+        onBackClick={handleBackToFifth}
+      >
+        <SixthList />
+      </Layout>
     )
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
-      <TemplateNavbar onBackClick={handleBackToDashboard} />
-      <TemplateHeader onBackClick={handleBackToDashboard} onAddClick={handleCircleClick} />
-      <div className="flex">
-        <TemplateSidebar />
-        <main className="flex-1">
-          <TemplateList />
-        </main>
-      </div>
-    </div>
+    <Layout
+      Navbar={TemplateNavbar}
+      Header={TemplateHeader}
+      Sidebar={TemplateSidebar}
+      isSidebarOpen={isSidebarOpen}
+      onToggleSidebar={toggleSidebar}
+      onBackClick={handleBackToDashboard}
+      onAddClick={handleCircleClick}
+    >
+      <TemplateList />
+    </Layout>
   )
 }
 

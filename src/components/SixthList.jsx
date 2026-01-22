@@ -4,9 +4,9 @@ import dashboard2 from '../assets/dashboard2.png'
 const SixthList = () => {
   return (
     <div className="preview-page">
-      <div className="preview-container">
+      <div className="preview-container flex-col lg:flex-row h-auto min-h-screen">
         {/* Left Side Panel */}
-        <div className="left-panel">
+        <div className="left-panel w-full lg:w-1/4">
           <div className="info-item">
             <div className="info-label">Template Name</div>
             <div className="info-value">Slot Updated Notification</div>
@@ -29,7 +29,7 @@ const SixthList = () => {
         </div>
 
         {/* Center Preview Card */}
-        <div className="center-preview">
+        <div className="center-preview flex-1 w-full lg:w-2/4">
           <div className="campaign-name-header">
             <div className="campaign-label">Campaign Name</div>
             <div className="campaign-value">Slot Updated Notification</div>
@@ -52,9 +52,9 @@ const SixthList = () => {
                 <div className="appointment-comparison-box">
                   <div className="appointment-box-container">
                     <div className="appointments-inner-container">
-                      <div className="appointment-column">
+                      <div className="appointment-column flex-1">
                         <div className="column-label">Previous</div>
-                        <div className="appointment-side previous-side"style={{width:"100px",marginLeft:"4.5rem"}}>
+                        <div className="appointment-side previous-side mx-auto"style={{width:"110px",marginLeft:"auto", marginRight:"auto"}}>
                           <div className="datetime-info">
                             <div className="date-row">
                               <svg className="icon" viewBox="0 0 24 24" fill="none">
@@ -76,15 +76,15 @@ const SixthList = () => {
                         </div>
                       </div>
                       
-                      <div className="arrow-icon"style={{marginTop:"55px"}}>
+                      <div className="arrow-icon rotate-90 sm:rotate-0" style={{marginTop:"55px"}}>
                         <svg viewBox="0 0 24 24" fill="none">
                           <path d="M5 12h14m-7-7 7 7-7 7" stroke="#4CAF50" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                         </svg>
                       </div>
                       
-                      <div className="appointment-column"style={{width:"100px",marginRight:"133px"}}>
+                      <div className="appointment-column flex-1" style={{width:"110px",marginRight:"0"}}>
                         <div className="column-label new-column-label">New</div>
-                        <div className="appointment-side new-side"style={{width:"100px"}}>
+                        <div className="appointment-side new-side mx-auto" style={{width:"110px", marginLeft:"auto", marginRight:"auto"}}>
                           <div className="datetime-info new-datetime"style={{width:"110px"}}>
                             <div className="date-row">
                               <svg className="icon" viewBox="0 0 24 24" fill="none">
@@ -116,7 +116,7 @@ const SixthList = () => {
         </div>
 
         {/* Right Side Panel */}
-        <div className="right-panel">
+        <div className="right-panel w-full lg:w-1/4">
           <div className="send-btn-container">
             <button className="send-btn">Send</button>
           </div>

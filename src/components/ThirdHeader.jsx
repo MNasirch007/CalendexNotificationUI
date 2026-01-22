@@ -7,18 +7,20 @@ import header1 from '../assets/header1.png'
 
 const TemplateHeader = ({ onBackClick }) => {
   return (
-    <header className="template-header">
-      <div className="template-header-content">
-        {/* Left section - Back arrow and title */}
-         <img src={header1} alt="" style={{height:"30px",width:"30px"}}/>
-        
-        <div className="template-header-left" style={{marginLeft: "-8rem"}}>
+    <header className="template-header h-auto py-2 sm:h-[60px] sm:py-0">
+      <div className="template-header-content flex-col md:flex-row gap-4 md:gap-0">
+        <div className="flex items-center gap-4 w-full md:w-auto">
+          {/* Left section - Back arrow and title */}
+          <img src={header1} alt="" className="hidden sm:block" style={{height:"30px",width:"30px"}}/>
           
-          <h1 className="template-header-title">Template list</h1>
+          <div className="template-header-left" style={{marginLeft: "0"}}>
+
+            <h1 className="template-header-title">Template list</h1>
+          </div>
         </div>
 
         {/* Center section - Search box */}
-        <div className="template-search-container" style={{marginLeft: "-8rem"}}>
+        <div className="template-search-container w-full md:w-[440px]" style={{marginLeft: "0"}}>
           <Search className="template-search-icon" />
           <input 
             type="text" 
@@ -36,7 +38,7 @@ const TemplateHeader = ({ onBackClick }) => {
         </div>
 
         {/* Right section - Add, Settings */}
-        <div className="template-header-right">
+        <div className="template-header-right w-full md:w-auto justify-end">
           <button className="template-add-button">Add</button>
           <button className="template-settings-button">
             <Settings className="template-settings-icon" />
