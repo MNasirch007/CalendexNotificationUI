@@ -12,9 +12,9 @@ const FourthList = ({ onNext }) => {
   ];
 
   return (
-    <div className="page-container"style={{height:"50rem"}}>
+    <div className="page-container flex-col lg:flex-row h-auto min-h-screen">
       {/* Side Components Panel */}
-      <div className="components-panel">
+      <div className="components-panel w-full lg:w-[260px] order-2 lg:order-1">
         {components.map((component, index) => (
           <div key={index} className="component-item">
             <div className="component-left">
@@ -31,7 +31,7 @@ const FourthList = ({ onNext }) => {
       </div>
 
       {/* Main content area with appointment modal */}
-      <div className="main-content">
+      <div className="main-content flex-1 w-full order-1 lg:order-2">
         {/* Notification Header Card */}
         <div className="fourth-notification-container">
           <div className="fourth-notification-card">
@@ -55,7 +55,7 @@ const FourthList = ({ onNext }) => {
               <div className="fourth-appointment-details">
                 {/* Light grey container for Previous and New appointments */}
                 <div className="fourth-appointment-container">
-                  <div className="fourth-appointment-comparison">
+                  <div className="fourth-appointment-comparison flex-col sm:flex-row items-center gap-4">
                     <div className="fourth-appointment-time previous">
                       <div className="fourth-time-label">Previous</div>
                       <div className="fourth-date-time">
@@ -78,7 +78,7 @@ const FourthList = ({ onNext }) => {
                       </div>
                     </div>
                     
-                    <div className="fourth-arrow">
+                    <div className="fourth-arrow rotate-90 sm:rotate-0">
                       <svg viewBox="0 0 24 24" fill="none">
                         <path d="M5 12h14m-7-7 7 7-7 7" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                       </svg>
@@ -116,12 +116,12 @@ const FourthList = ({ onNext }) => {
       </div>
       
       {/* Floating Next Button Container - Top Right Corner */}
-      <div className="next-button-container"style={{marginRight:"2rem",marginbottom:"8rem"}}>
-        <button className="next-button-floating" onClick={onNext}>Next</button>
+      <div className="next-button-container order-3 lg:static" style={{marginRight:"2rem",marginBottom:"2rem"}}>
+        <button className="next-button-floating w-full lg:w-auto" onClick={onNext}>Next</button>
       </div>
       
       {/* Menu Panel - Below Next Button */}
-      <div className="menu-panel"style={{marginbottom:"8rem",marginRight:"2rem"}}>
+      <div className="menu-panel order-4 lg:static" style={{marginBottom:"2rem",marginRight:"2rem"}}>
         <div className="menu-item">
           <span className="menu-text">Preview</span>
           <div className="menu-arrow">▶</div>

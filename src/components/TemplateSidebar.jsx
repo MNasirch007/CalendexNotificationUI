@@ -14,7 +14,7 @@ const Sidebar = () => {
   const [selectedIcon, setSelectedIcon] = useState(2);
 
   return (
-    <div className="sidebar"style={{height:"683px",width:"54px",borderTop:"2px solid #FFD705",borderRadius:"10px",marginTop:"5px"}}>
+    <div className="sidebar"style={{height:"100%",minHeight:"683px",width:"54px",borderTop:"2px solid #FFD705",borderRadius:"10px",marginTop:"5px"}}>
       {/* Top yellow section */}
       {/* <div className="sidebar-top">
         <img src={sidebar11} alt="Top icon" className="sidebar-img" style={{height:"12px",width:"12px"}}/>

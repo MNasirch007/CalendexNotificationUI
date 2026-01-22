@@ -73,9 +73,9 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="dashboard">
+    <div className="dashboard overflow-x-hidden">
       {/* Stats Cards */}
-      <div className="stats-grid">
+      <div className="stats-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {statsCards.map((card, index) => {
           return (
             <div key={index} className="stat-card">
@@ -113,10 +113,10 @@ const Dashboard = () => {
       </div>
 
       {/* Performance Chart Section */}
-      <div className="chart-section"style={{backgroundColor:"#ffff"}}>
+      <div className="chart-section w-full overflow-hidden"style={{backgroundColor:"#ffff"}}>
         <h2 className="chart-title"style={{backgroundColor:"#ffff"}}>Performance Over Time</h2>
-        <div className="chart-container"style={{backgroundColor:"#ffff"}}>
-          <div className="chart-placeholder"style={{backgroundColor:"#ffff"}}>
+        <div className="chart-container overflow-x-auto"style={{backgroundColor:"#ffff"}}>
+          <div className="chart-placeholder min-w-[800px]"style={{backgroundColor:"#ffff"}}>
             <div className="chart-legend"style={{backgroundColor:"#ffff"}}>
               <div className="legend-item"style={{backgroundColor:"#ffff"}}>
               
@@ -327,62 +327,73 @@ const Dashboard = () => {
       </div>
 
       {/* Preview Cards Section */}
-      <div className="preview-cards-section">
-        <div className="preview-cards-grid">
+      <div className="preview-cards-section overflow-hidden">
+        <div className="preview-cards-grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Push Notification Preview Card */}
-          <div className="preview-card">
+          <div className="preview-card w-full max-w-full">
             <h3 className="preview-card-title">Push Notification Preview</h3>
-            <div className="notification-preview">
-              <div className="notification-time"style={{marginRight:"15rem"}}>9:41</div>
-              <div className="notification-content"style={{height:"129px",width:"328px",borderRadius:"14px",marginTop:"1rem"}}>
-                <div className="notification-header">
-                  <div className="notification-icon">
-                    <div className="app-icon"style={{height:"40px",width:"40px"}}> <img src={bigcardicon} alt="" style={{height:"20px",width:"20px"}}/></div>
+            <div className="notification-preview mx-auto w-full max-w-[358px]">
+              <div className="notification-time text-center sm:mr-0">9:41</div>
+              <div className="notification-content w-full h-auto min-h-[129px] rounded-[14px] mt-4 p-4">
+                <div className="notification-header flex items-start gap-3">
+                  <div className="notification-icon shrink-0">
+                    <div className="app-icon w-10 h-10 flex items-center justify-center bg-blue-600 rounded-lg">
+                      <img src={bigcardicon} alt="" className="w-5 h-5"/>
+                    </div>
                   </div>
-                  <div className="notification-text">
-                    <div className="notification-title"style={{fontFamily:"roboto",fontSize:"20px",fontWeight:"700",marginBottom:"8px"}}>Appointment Updated</div>
-                    <div className="notification-message"style={{fontFamily:"roboto",fontSize:"14px",fontWeight:"400",color:"#9ca3af",lineHeight:"1.5"}}>Your appointment has been rescheduled to 2:30 PM on Jan 15.</div>
+                  <div className="notification-text overflow-hidden">
+                    <div className="notification-title font-roboto text-lg sm:text-xl font-bold mb-2">Appointment Updated</div>
+                    <div className="notification-message font-roboto text-sm text-gray-400 leading-relaxed">Your appointment has been rescheduled to 2:30 PM on Jan 15.</div>
                   </div>
-                  <div className="notification-arrow">›</div>
+                  <div className="notification-arrow text-gray-400 text-2xl">›</div>
                 </div>
-                <div className="notification-action"style={{marginLeft:"4.5rem",marginTop:"3.5rem"}}>
-                  <div className='dot'style={{color:"#155DFC",paddingLeft:"10px",paddingBottom:"3rem",marginBottom:"2px"}}>● </div>
-                  <span className="tap-to-view"style={{paddingLeft:"9px"}}>Tap to view details</span>
+                <div className="notification-action mt-6 sm:mt-14 ml-0 sm:ml-16 flex items-center gap-2 border-t border-gray-100 pt-2">
+                  <div className='dot text-blue-600'>● </div>
+                  <span className="tap-to-view text-xs text-gray-500">Tap to view details</span>
                 </div>
               </div>
             </div>
           </div>
 
           {/* In-App Message Preview Card */}
-          <div className="preview-card">
+          <div className="preview-card w-full max-w-full">
             <h3 className="preview-card-title">In-App Message Preview</h3>
-              <div className="in-app-content"style={{height:"472px",width:"360px",marginLeft:"115px"}}>
-                <img src={dashboard2} alt="" style={{height:"80px",width:"80px",borderRadius:"26843500px",marginTop:"16px",marginLeft:"110px"}}/>
-                <h4 className="in-app-title"style={{fontSize:"24px",fontFamily:"roboto",fontWeight:"700,bold",marginTop:"10px"}}>Appointment Updated!</h4>
-                <p className="in-app-message"style={{fontSize:"12px",fontFamily:"roboto",fontWeight:"400"}}>Your appointment has been successfully rescheduled</p>
+              <div className="in-app-content mx-auto w-full max-w-[360px] h-auto p-6">
+                <img src={dashboard2} alt="" className="w-20 h-20 rounded-full mx-auto mt-4"/>
+                <h4 className="in-app-title text-2xl font-roboto font-bold mt-4">Appointment Updated!</h4>
+                <p className="in-app-message text-xs font-roboto mt-2 text-gray-500">Your appointment has been successfully rescheduled</p>
                 
-                <div className="time-change">
-                  <div className="time-section">
-                    <span className="time-label">Previous</span>
-                    <div className="time-box">
-
-                      <span className="date"style={{display:"flex",gap:"7px"}}><img src={bigcardicon2} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/> Jan 15, 2025</span>
-                      <span className="time"style={{display:"flex",gap:"7px",marginTop:"5px"}}><img src={bigcardicon3} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/> 12:00 AM</span>
+                <div className="time-change flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 bg-gray-50 p-4 rounded-xl">
+                  <div className="time-section text-center">
+                    <span className="time-label text-xs text-gray-400 font-semibold mb-2 block">Previous</span>
+                    <div className="time-box bg-white border border-gray-100 rounded-lg p-3 min-w-[120px]">
+                      <span className="date flex items-center gap-2 text-xs">
+                        <img src={bigcardicon2} alt="" className="w-4 h-4"/> Jan 15, 2025
+                      </span>
+                      <span className="time flex items-center gap-2 text-xs mt-1">
+                        <img src={bigcardicon3} alt="" className="w-4 h-4"/> 12:00 AM
+                      </span>
                     </div>
                   </div>
                   
-                  <div className="arrow-right"> <img src={erro2} alt="" style={{marginTop:"22px"}}/> </div>
+                  <div className="arrow-right rotate-90 sm:rotate-0">
+                    <img src={erro2} alt="" className="w-6 h-6"/>
+                  </div>
                   
-                  <div className="time-section">
-                    <span className="time-label new">New</span>
-                    <div className="time-box new">
-                      <span className="date" style={{display:"flex",gap:"9px"}}> <img src={bigcardicon4} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/>Jan 15, 2025</span>
-                      <span className="time"style={{display:"flex",gap:"9px",color:"#00A63E",marginTop:"5px"}}> <img src={bigcardicon6} alt="" style={{height:"16px",width:"16px",marginTop:"3px"}}/> 2:30 PM</span>
+                  <div className="time-section text-center">
+                    <span className="time-label new text-xs text-green-500 font-semibold mb-2 block">New</span>
+                    <div className="time-box new bg-green-50 border border-green-200 rounded-lg p-3 min-w-[120px]">
+                      <span className="date flex items-center gap-2 text-xs">
+                        <img src={bigcardicon4} alt="" className="w-4 h-4"/>Jan 15, 2025
+                      </span>
+                      <span className="time flex items-center gap-2 text-xs text-green-600 mt-1 font-semibold">
+                        <img src={bigcardicon6} alt="" className="w-4 h-4"/> 2:30 PM
+                      </span>
                     </div>
                   </div>
                 </div>
                 
-                <button className="ok-button">OK</button>
+                <button className="ok-button w-full mt-8 bg-blue-500 text-white py-3 rounded-xl font-semibold hover:bg-blue-600 transition-colors">OK</button>
               </div>
             
           </div>
