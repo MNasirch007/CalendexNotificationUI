@@ -70,9 +70,9 @@ const TemplateList = () => {
   ]
 
   return (
-    <div className="template-list-content"style={{height:"523px"}}>
+    <div className="template-list-content h-auto min-h-[523px]">
       {/* Table Section */}
-      <div className="template-table-container"style={{height:"523px"}}>
+      <div className="template-table-container h-auto min-h-[523px] overflow-x-auto">
         <table className="template-table">
           <thead>
             <tr>

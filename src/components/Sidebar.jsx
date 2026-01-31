@@ -12,7 +12,7 @@ const Sidebar = () => {
   const [selectedIcon, setSelectedIcon] = useState(0);
 
   return (
-    <div className="sidebar"style={{height:"683px",width:"54px",borderTop:"2px solid #FFD705",borderRadius:"10px",marginTop:"5px"}}>
+    <div className="sidebar"style={{height:"100%",borderTop:"2px solid #FFD705",borderRadius:"10px",marginTop:"5px"}}>
       {/* Top yellow section */}
       <div 
         className={`sidebar-icon-container ${selectedIcon === 0 ? 'active' : ''}`} 

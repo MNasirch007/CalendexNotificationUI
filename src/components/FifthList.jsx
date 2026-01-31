@@ -4,8 +4,8 @@ const FifthList = ({ onNext }) => {
   return (
     <div className="notification-campaign">
       <div className="campaign-body">
-        <div className="main-content">
-          <div className="left-card"style={{marginRight:"3px"}}>
+        <div className="main-content flex flex-col lg:flex-row">
+          <div className="left-card w-full lg:w-1/3" style={{marginRight:"0"}}>
             <div className="card">
               <div className="card-label">Template Name</div>
               <div className="card-value">Slot Updated Notification</div>
@@ -13,7 +13,7 @@ const FifthList = ({ onNext }) => {
             </div>
           </div>
           
-          <div className="cards-grid"style={{marginRight:"6rem"}}>
+          <div className="cards-grid w-full lg:w-2/3 grid grid-cols-1 sm:grid-cols-2" style={{marginRight:"0"}}>
             <div className="card">
               <div className="card-label">Campaign Name</div>
               <div className="card-value">Slot Updated Notification</div>

@@ -9,16 +9,15 @@ const TemplateHeader = ({ onBackClick }) => {
   return (
     <header className="template-header">
       <div className="template-header-content">
-        {/* Left section - Back arrow and title */}
-         <img src={header1} alt="" style={{height:"30px",width:"30px"}}/>
-        
-        <div className="template-header-left" style={{marginLeft: "-8rem"}}>
+        <div className="template-header-left">
+          {/* Left section - Back arrow and title */}
+          <img src={header1} alt="" className="template-header-icon" />
           
           <h1 className="template-header-title">Template list</h1>
         </div>
 
         {/* Center section - Search box */}
-        <div className="template-search-container" style={{marginLeft: "-8rem"}}>
+        <div className="template-search-container">
           <Search className="template-search-icon" />
           <input 
             type="text" 

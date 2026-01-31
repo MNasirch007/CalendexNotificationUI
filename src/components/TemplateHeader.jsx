@@ -8,16 +8,16 @@ import header1 from '../assets/header1.png'
 const TemplateHeader = ({ onBackClick, onAddClick }) => {
   
   return (
-    <header className="template-header">
-      <div className="template-header-content">
+    <header className="template-header h-auto py-2 sm:h-[60px] sm:py-0">
+      <div className="template-header-content flex-col md:flex-row gap-4 md:gap-0">
         {/* Left section - Icon and title */}
-        <div className="template-header-left">
-          <img src={header1} alt="" className="template-header-icon" />
+        <div className="template-header-left w-full md:w-auto">
+          <img src={header1} alt="" className="template-header-icon hidden sm:block" />
           <h1 className="template-header-title"style={{marginLeft:"2rem"}}>Template list</h1>
         </div>
 
         {/* Center section - Search box */}
-        <div className="template-search-container">
+        <div className="template-search-container w-full md:w-[440px]">
           <Search className="template-search-icon" />
           <input 
             type="text" 
@@ -35,7 +35,7 @@ const TemplateHeader = ({ onBackClick, onAddClick }) => {
         </div>
 
         {/* Right section - Add, Settings */}
-        <div className="template-header-right">
+        <div className="template-header-right w-full md:w-auto justify-end">
           <button className="template-add-button" onClick={onAddClick}>Add</button>
           <button className="template-settings-button">
             <Settings className="template-settings-icon" />

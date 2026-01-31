@@ -1,14 +1,20 @@
-import { User, ChevronDown } from 'lucide-react'
+import { User, ChevronDown, Menu } from 'lucide-react'
 import logoNavbar from '../assets/logo-navbar.png'
 import './Navbar.css'
 import logo2 from '../assets/logo2-navbar.png'
 import profile from '../assets/profile.png'
 
-const FourthNavbar = ({ onBackClick }) => {
+const FourthNavbar = ({ onBackClick, onMenuClick }) => {
   return (
     <nav className="bg-blue-600 text-white px-4 h-[40px] flex items-center justify-between">
       {/* Left section - Logo with Back Arrow */}
       <div className="flex items-center space-x-4">
+        <button
+          className="md:hidden p-1 hover:bg-blue-700 rounded transition-colors"
+          onClick={onMenuClick}
+        >
+          <Menu size={20} />
+        </button>
         {/* Back Arrow Button */}
         <button 
           onClick={onBackClick}
@@ -111,13 +117,13 @@ const FourthNavbar = ({ onBackClick }) => {
 
         {/* User profile */}
         <div className="flex items-center space-x-2">
-          <img src={logo2} alt="" style={{height:"26px",width:"26px"}}/>
-          <div className="flex flex-col"style={{marginRight:"22px"}}>
+          <img src={logo2} alt="" className="hidden sm:block" style={{height:"26px",width:"26px"}}/>
+          <div className="hidden sm:flex flex-col"style={{marginRight:"22px"}}>
             <span className="text-xs font-medium leading-tight">Admin</span>
             <span className="text-xs font-normal leading-tight">Expert Medical Center</span>
           </div>
-          <div className="h-6 w-px bg-white opacity-30"style={{marginleft:"10px"}}></div>
-          <img src={profile} alt="" style={{height:"30px",width:"30px",marginLeft:"2rem"}} />
+          <div className="hidden sm:block h-6 w-px bg-white opacity-30"style={{marginleft:"10px"}}></div>
+          <img src={profile} alt="" style={{height:"30px",width:"30px"}} className="ml-2 sm:ml-8" />
         </div>
       </div>
     </nav>
